@@ -2,3 +2,24 @@ ERROR - 2022-05-16 18:59:53 --> Error connecting to the database: Nenhuma conexÃ
 
 ERROR - 2022-05-16 19:00:12 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-food CHARACTER SET utf8 COLLATE utf8_general_ci' at line 1
 ERROR - 2022-05-16 19:01:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '-food CHARACTER SET utf8 COLLATE utf8_general_ci' at line 1
+CRITICAL - 2022-05-16 19:17:51 --> Invalid file: Admin/Usuarios/index.php
+#0 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/Usuarios/...')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Usuarios/...', Array, true)
+#2 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Home.php(15): view('Admin/Usuarios/...', Array)
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#4 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#8 {main}
+CRITICAL - 2022-05-16 19:49:22 --> Invalid file: Admin/layout/principal.php
+#0 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Admin/layout/pr...')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(226): CodeIgniter\View\View->render('Admin/layout/pr...', Array, true)
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/inde...', Array, true)
+#3 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Home.php(15): view('Admin/Home/inde...', Array)
+#4 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+#6 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#9 {main}
