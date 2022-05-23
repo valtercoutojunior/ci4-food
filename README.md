@@ -1,2 +1,2 @@
 # ci4-food
- Sistema de regenciamento de pizzaria com controle produtos
+ Sistema de gerenciamento de pizzaria com controle produtos
