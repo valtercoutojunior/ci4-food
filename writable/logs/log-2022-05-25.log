@@ -1,0 +1,36 @@
+CRITICAL - 2022-05-25 17:33:12 --> Undefined variable: card_title
+#0 C:\xampp\htdocs\ci4-food\app\Views\Admin\Home\index.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/inde...', Array, true)
+#4 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Home.php(15): view('Admin/Home/inde...', Array)
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#6 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+#7 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-25 17:33:23 --> Undefined variable: card_title
+#0 C:\xampp\htdocs\ci4-food\app\Views\Admin\Home\index.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/inde...', Array, true)
+#4 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Home.php(15): view('Admin/Home/inde...', Array)
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#6 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+#7 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-25 17:34:19 --> Undefined variable: title
+#0 C:\xampp\htdocs\ci4-food\app\Views\Admin\Home\index.php(14): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 14, Array)
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Common.php(1089): CodeIgniter\View\View->render('Admin/Home/inde...', Array, true)
+#4 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Home.php(15): view('Admin/Home/inde...', Array)
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Home->index()
+#6 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Home))
+#7 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}

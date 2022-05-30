@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="<?= site_url('admin/assets/img/favicon.png'); ?>" rel="icon">
+    <link href="<?= site_url('admin/assets/img/apple-touch-icon.png'); ?>" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -24,7 +24,6 @@
     <link href="<?= site_url('admin/assets/vendor/quill/quill.snow.css'); ?>" rel="stylesheet">
     <link href="<?= site_url('admin/assets/vendor/quill/quill.bubble.css'); ?>" rel="stylesheet">
     <link href="<?= site_url('admin/assets/vendor/remixicon/remixicon.css'); ?>" rel="stylesheet">
-    <link href="<?= site_url('admin/assets/vendor/simple-datatables/style.css'); ?>" rel="stylesheet">
 
     <!-- Template Main CSS File -->
     <link href="<?= site_url('admin/assets/css/style.css'); ?>" rel="stylesheet">
@@ -512,12 +511,17 @@
     </aside><!-- End Sidebar-->
 
     <main id="main" class="main flex-fill">
-        <section class="section dashboard">
-            <?php
-            //Essa parte vai renderizar o conteudo de cada página que extendere o layout
-            echo $this->renderSection('conteudo');
-            ?>
-        </section>
+
+        <?php
+        //Essa parte vai renderizar o conteudo de cada página que extendere o layout
+        echo $this->renderSection('breadcrumb');
+        ?>
+
+        <?php
+        //Essa parte vai renderizar o conteudo de cada página que extendere o layout
+        echo $this->renderSection('conteudo');
+        ?>
+
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -539,6 +543,8 @@
 
     <!-- Vendor JS Files -->
 
+    <script src="<?= site_url('admin/assets/vendor/jquery/jquery.min.js'); ?>"></script>
+    <script src="<?= site_url('admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?= site_url('admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <script src="<?= site_url('admin/assets/vendor/quill/quill.min.js'); ?>"></script>
     <!-- Template Main JS File -->
@@ -546,7 +552,7 @@
 
     <?php
     //Aqui será renderezidado os scripts 
-    echo $this->renderSection('scrpts');
+    echo $this->renderSection('scripts');
     ?>
 
 </body>
