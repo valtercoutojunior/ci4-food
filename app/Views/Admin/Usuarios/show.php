@@ -7,106 +7,143 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('breadcrumb') ?>
-<div class="pagetitle">
-    <h1>Detalhes do Usuário</h1>
-    <nav>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="<?= site_url('admin/home'); ?>">Dashboard</a></li>
-            <li class="breadcrumb-item"><a href="<?= site_url('admin/usuarios'); ?>">Listar Usuários</a></li>
-            <li class="breadcrumb-item active">Detalhes do Usuário</li>
-        </ol>
-    </nav>
-</div><!-- End Page Title -->
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Detalhes do Usuário</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="<?= site_url('admin/home'); ?>">Home</a></li>
+                    <li class="breadcrumb-item"><a href="<?= site_url('admin/usuarios'); ?>">Listar Usuários</a></li>
+                    <li class="breadcrumb-item active">Detalhes do Usuário</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
 <?= $this->endSection() ?>
 
 <?= $this->section('conteudo') ?>
-<section class="section profile">
+<!-- Main content -->
+<section class="content">
     <div class="container">
+
         <div class="row">
-            <div class="col-xl-4">
-                <div class="card">
-                    <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-                        <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-                        <h2><?= $usuario->nome; ?></h2>
-                        <h3>Web Designer</h3>
+            <div class="col-md-3">
+
+                <!-- Profile Image -->
+                <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+                        <div class="text-center">
+                            <img class="profile-user-img img-fluid img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
+                        </div>
+
+                        <h3 class="profile-username text-center">
+                            <?= $usuario->nome; ?>
+                        </h3>
+
+                        <!-- <p class="text-muted text-center">Software Engineer</p> -->
+                        <a href="#" class="btn btn-primary btn-block"><b>Alterar Imagem</b></a>
                     </div>
+                    <!-- /.card-body -->
                 </div>
+                <!-- /.card -->
             </div>
-
-            <div class="col-xl-8">
-
+            <!-- /.col -->
+            <div class="col-md-9">
                 <div class="card">
-                    <div class="card-body pt-3">
-                        <!-- Bordered Tabs -->
-                        <ul class="nav nav-tabs nav-tabs-bordered">
-
+                    <div class="card-header p-2">
+                        <ul class="nav nav-pills">
                             <li class="nav-item">
-                                <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Detalhes Gerais</button>
+                                <a class="nav-link active" href="#activity" data-toggle="tab">
+                                    Dados Gerais
+                                </a>
                             </li>
                         </ul>
-                        <div class="tab-content pt-2">
-                            <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                                <h3 class="card-title">Detalhes do Usuário</h3>
-                                <hr>
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4 label">Nome completo</div>
-                                    <div class="col-lg-9 col-md-8"><b><?= esc($usuario->nome); ?></b></div>
-                                </div>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+                        <div class="tab-content">
+                            <div class="active tab-pane" id="activity">
+                                <!-- Post -->
+                                <div class="post">
+                                    <form class="form-horizontal">
+                                        <div class="form-group row">
+                                            <label for="inputName" class="col-sm-2 col-form-label">Nome completo</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="inputName" placeholder="Name" value="<?= $usuario->nome; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputEmail" class="col-sm-2 col-form-label">E-mail</label>
+                                            <div class="col-sm-10">
+                                                <input type="email" class="form-control" id="inputEmail" placeholder="Email" value="<?= $usuario->email; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputName2" class="col-sm-2 col-form-label">Perfil</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="inputName2" placeholder="Name" value="<?= $usuario->perfil; ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputSkills" class="col-sm-2 col-form-label">Situação</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="inputSkills" placeholder="Skills">
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label for="inputSkills" class="col-sm-2 col-form-label">Criado em</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="<?= $usuario->criado_em->humanize(); ?>">
+                                            </div>
+                                        </div>
 
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4 label">E-mail</div>
-                                    <div class="col-lg-9 col-md-8"><?= esc($usuario->email); ?></div>
-                                </div>
+                                        <div class="form-group row">
+                                            <label for="inputSkills" class="col-sm-2 col-form-label">Atualizado em</label>
+                                            <div class="col-sm-10">
+                                                <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="<?= $usuario->atualizado_em->humanize(); ?>">
+                                            </div>
+                                        </div>
 
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4 label">Situação</div>
-                                    <div class="col-lg-9 col-md-8">
-                                        <?= ($usuario->ativo == 1 ? 'Ativo' : 'Inativo'); ?>
-                                    </div>
+                                    </form>
                                 </div>
-
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4 label">Perfil de acesso</div>
-                                    <div class="col-lg-9 col-md-8">
-                                        <?= ($usuario->is_admin ? 'Administrador' : 'Cliente'); ?>
-                                    </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4 label">Criado em</div>
-                                    <div class="col-lg-9 col-md-8"><?= $usuario->criado_em->humanize(); ?></div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-4 label">Atualizado em</div>
-                                    <div class="col-lg-9 col-md-8"><?= $usuario->criado_em->humanize(); ?></div>
-                                </div>
+                                <!-- /.post -->
                             </div>
+                            <!-- /.tab-pane -->
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center justify-content-sm-between">
 
-                            <div class="card-footer">
-                                <div class="d-flex justify-content-center justify-content-sm-between">
+                            <a href="<?= site_url('admin/usuarios'); ?>" class="btn btn-secondary">
+                                <i class="bi bi-arrow-counterclockwise me-3"></i>Voltar
+                            </a>
 
-                                    <a href="<?= site_url('admin/usuarios'); ?>" class="btn btn-secondary">
-                                        <i class="bi bi-arrow-counterclockwise me-1"></i>Voltar
-                                    </a>
+                            <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-warning">
+                                <i class="bi bi-pencil me-3"></i>Editar
+                            </a>
 
-                                    <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-warning">
-                                        <i class="bi bi-pencil me-1"></i>Editar
-                                    </a>
+                            <a href="" class="btn btn-danger">
+                                <i class="bi bi-trash me-3"></i>Deletar
+                            </a>
 
-                                    <a href="" class="btn btn-danger">
-                                        <i class="bi bi-trash3 me-1"></i>Deletar
-                                    </a>
-
-                                </div>
-                            </div>
-                        </div><!-- End Bordered Tabs -->
+                        </div>
                     </div>
                 </div>
+                <!-- /.card -->
             </div>
+            <!-- /.col -->
         </div>
     </div>
+    <!--/. container-fluid -->
 </section>
+<!-- /.content -->
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>

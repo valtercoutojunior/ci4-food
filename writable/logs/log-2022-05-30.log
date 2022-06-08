@@ -6,3 +6,112 @@ CRITICAL - 2022-05-30 08:24:20 --> Argument 1 passed to App\Controllers\Admin\Us
 #4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
 #6 {main}
+CRITICAL - 2022-05-30 08:49:30 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 49
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(49): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 13:47:37 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 49
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(49): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+ERROR - 2022-05-30 13:48:00 --> Unknown column 'password' in 'field list'
+CRITICAL - 2022-05-30 13:48:00 --> Unknown column 'password' in 'field list'
+#0 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE `usuario...', 0)
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Database\BaseConnection.php(670): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `usuario...')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Database\BaseConnection.php(598): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `usuario...')
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1913): CodeIgniter\Database\BaseConnection->query('UPDATE `usuario...', Array, false)
+#4 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Model.php(298): CodeIgniter\Database\BaseBuilder->update()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\BaseModel.php(865): CodeIgniter\Model->doUpdate(Array, Array)
+#6 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Array)
+#7 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->update('1', Object(App\Entities\Usuario))
+#8 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(75): CodeIgniter\BaseModel->save(Object(App\Entities\Usuario))
+#9 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->atualizar('1')
+#10 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#11 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#13 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#14 {main}
+CRITICAL - 2022-05-30 14:14:36 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 49
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(49): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 14:14:53 --> Não há dados para update.
+#0 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\BaseModel.php(1593): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\BaseModel.php(832): CodeIgniter\BaseModel->transformDataToArray(Array, 'update')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Model.php(651): CodeIgniter\BaseModel->update(Array, Object(App\Entities\Usuario))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->update('1', Object(App\Entities\Usuario))
+#4 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(82): CodeIgniter\BaseModel->save(Object(App\Entities\Usuario))
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->atualizar('1')
+#6 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#7 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2022-05-30 14:17:35 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::back() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 86
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(86): CodeIgniter\HTTP\RedirectResponse->back('informacao', 'N\xC3\xA3o h\xC3\xA1 dados ...')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->atualizar('1')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 14:17:42 --> Argument 1 passed to CodeIgniter\HTTP\RedirectResponse::back() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 86
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(86): CodeIgniter\HTTP\RedirectResponse->back('informacao', 'N\xC3\xA3o h\xC3\xA1 dados ...')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->atualizar('1')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 14:18:43 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 49
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(49): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 14:18:46 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 49
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(49): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 14:19:34 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 48
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(48): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 14:20:04 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 48
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(48): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}
+CRITICAL - 2022-05-30 14:20:11 --> Argument 1 passed to App\Controllers\Admin\Usuarios::buscaUsuarioOu404() must be of the type int or null, string given, called in C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php on line 48
+#0 C:\xampp\htdocs\ci4-food\app\Controllers\Admin\Usuarios.php(48): App\Controllers\Admin\Usuarios->buscaUsuarioOu404('assets')
+#1 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(832): App\Controllers\Admin\Usuarios->show('assets', 'img', 'profile-img.jpg')
+#2 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin\Usuarios))
+#3 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\xampp\htdocs\ci4-food\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\xampp\htdocs\ci4-food\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#6 {main}

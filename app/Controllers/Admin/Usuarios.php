@@ -26,7 +26,6 @@ class Usuarios extends BaseController
         return view('Admin/Usuarios/index', $data);
     }
 
-
     public function procurar()
     {
         if (!$this->request->isAJAX()) {
@@ -64,6 +63,42 @@ class Usuarios extends BaseController
         return view('Admin/Usuarios/editar', $data);
     }
 
+    public function atualizar($id = null)
+    {
+        if ($this->request->getMethod() === 'post') {
+            $usuario = $this->buscaUsuarioOu404($id);
+            $post = $this->request->getPost();
+
+            //Remove a obrigação da senha na atualização
+            if (empty($post['password'])) {
+                $this->usuarioModel->desabilitaValidacaoSenha();
+                unset($post['password']);
+                unset($post['password_confirmation']);
+            }
+
+            $usuario->fill($post);
+
+
+            //Vefica se houve alteração no campos
+            if (!$usuario->hasChanged()) {
+                return redirect()->back()->with('informacao', "Não há dados para atualizar");
+            }
+
+            if ($this->usuarioModel->protect(false)->save($usuario)) {
+                return redirect()->to(site_url("admin/usuarios/show/$usuario->id"))
+                    ->with('sucesso', "Dados do usuário $usuario->nome, atualizados com sucesso!");
+            } else {
+                return redirect()
+                    ->back()
+                    ->with('errors_model', $this->usuarioModel->errors())
+                    ->with('atencao', "Verifique os erros e tente novamente");
+            }
+        } else {
+            return redirect()->back();
+        }
+    }
+
+    /*** Busca os dados do usuário pelo id do mesmo */
     private function buscaUsuarioOu404(int $id = null)
     {
         if (!$id || !$usuario = $this->usuarioModel->where('id', $id)->first()) {

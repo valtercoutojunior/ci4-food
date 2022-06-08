@@ -8,21 +8,24 @@
 <?= $this->endSection() ?>
 
 <?= $this->section('breadcrumb') ?>
-<div class="pagetitle">
-    <h1>Listando Usuários</h1>
-    <nav>
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-                <a href="<?= site_url('admin/home'); ?>">
-                    Dashboard
-                </a>
-            </li>
-            <li class="breadcrumb-item active">Listar Usuários</li>
-        </ol>
-    </nav>
-</div><!-- End Page Title -->
+<!-- Content Header (Page header) -->
+<div class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+            <div class="col-sm-6">
+                <h1 class="m-0">Listagem de Usuários</h1>
+            </div><!-- /.col -->
+            <div class="col-sm-6">
+                <ol class="breadcrumb float-sm-right">
+                    <li class="breadcrumb-item"><a href="<?= site_url('admin/home/index'); ?>">Home</a></li>
+                    <li class="breadcrumb-item active">Listar Usuários</li>
+                </ol>
+            </div><!-- /.col -->
+        </div><!-- /.row -->
+    </div><!-- /.container-fluid -->
+</div>
+<!-- /.content-header -->
 <?= $this->endSection() ?>
-
 
 <?= $this->section('conteudo') ?>
 <div class="container">
@@ -31,20 +34,11 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">
-                        <?= $titulo; ?>
-                    </h5>
-
-                    <div class="ui-widget">
-                        <input class="form-control mb-5" placeholder="Pesquisar usuário..." id="query" name="query">
-                    </div>
-
-
                     <!-- Table with stripped rows -->
                     <table class="table table-striped table-hover">
                         <thead>
                             <tr>
-                                <th scope="col">Nome Completo</th>
+                                <th scope="col">Nome completo</th>
                                 <th scope="col">E-mail</th>
                                 <th scope="col">CPF</th>
                                 <th scope="col">Situação</th>
@@ -77,6 +71,20 @@
 <?= $this->section('scripts') ?>
 <!-- aqui vai os scripts vai extender -->
 <script src="<?= site_url('admin/assets/vendor/auto-complete/jquery-ui.js'); ?>"></script>
+
+<script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>
+<script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
+<script src="../../assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
+<script src="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
+<script src="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.js"></script>
+<script src="../../assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
+<script src="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
+<script src="../../assets/vendor/libs/jszip/jszip.js"></script>
+<script src="../../assets/vendor/libs/pdfmake/pdfmake.js"></script>
+<script src="../../assets/vendor/libs/datatables-buttons/buttons.html5.js"></script>
+<script src="../../assets/vendor/libs/datatables-buttons/buttons.print.js"></script>
+
+
 <script>
     $(function() {
         $("#query").autocomplete({
