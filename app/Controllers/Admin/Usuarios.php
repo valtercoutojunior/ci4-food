@@ -19,7 +19,7 @@ class Usuarios extends BaseController
     /** Apresenta a view com os dados de listagem de todos os usuários. Inclusive os deletados */
     public function index()
     {
-        $usuarios = $this->usuarioModel->findAll();
+        $usuarios = $this->usuarioModel->withDeleted(true)->findAll();
         $data = [
             'titulo'    => 'Listando os Usuários',
             'usuarios'  => $usuarios,
@@ -134,7 +134,6 @@ class Usuarios extends BaseController
     public function excluir($id = null)
     {
         $usuario = $this->buscaUsuarioOu404($id);
-
         if ($this->request->getMethod() === 'post') {
             $this->usuarioModel->delete($id);
             return redirect()->to(site_url("admin/usuarios"))->with('sucesso', "Usuário <b>$usuario->nome</b>, excluído com sucesso!");

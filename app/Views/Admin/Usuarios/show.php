@@ -133,7 +133,6 @@
                             <a href="<?= site_url("admin/usuarios/excluir/$usuario->id"); ?>" class="btn btn-danger">
                                 <i class="far fa-trash-alt mr-2"></i>Excluir
                             </a>
-
                         </div>
                     </div>
                 </div>
