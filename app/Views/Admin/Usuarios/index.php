@@ -39,7 +39,7 @@
                 </div>
 
                 <div class="col-12 col-sm-6 my-2">
-                    <a href="#" class="btn btn-primary float-md-right">
+                    <a href="<?= site_url("admin/usuarios/criar"); ?>" class="btn btn-primary float-md-right">
                         <i class="fas fa-plus mr-2"></i>Novo
                     </a>
                 </div>

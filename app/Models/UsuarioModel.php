@@ -80,8 +80,6 @@ class UsuarioModel extends Model
             ->getResult();
     }
 
-
-
     /** Desabilita a verifiação dos campos de senha caso o usuário não informe-os */
     public function desabilitaValidacaoSenha()
     {

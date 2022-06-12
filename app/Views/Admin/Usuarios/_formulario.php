@@ -5,7 +5,7 @@
     </div>
     <div class="form-group col-md-3">
         <label for="inputCpf">CPF</label>
-        <input type="text" class="form-control cpf" name="cpf" id="inputCpf" value="<?= old('nome', esc($usuario->cpf)); ?>">
+        <input type="text" class="form-control cpf" name="cpf" id="inputCpf" value="<?= old('cpf', esc($usuario->cpf)); ?>">
     </div>
 </div>
 
