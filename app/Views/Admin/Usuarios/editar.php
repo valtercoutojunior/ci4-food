@@ -1,7 +1,6 @@
 <?= $this->extend('Admin/layout/principal') ?>
 <?= $this->section('titulo') ?><?= $titulo; ?><?= $this->endSection() ?>
 
-
 <?= $this->section('estilos') ?>
 <!-- estilos da pagina que vai extender -->
 <?= $this->endSection() ?>
@@ -30,14 +29,11 @@
 <!-- Main content -->
 <section class="content">
     <div class="container">
-        <div class="card">
+        <div class="card card-warning card-outline">
             <div class="card-header">
-
-                <h4 class="h4">
-                    Editar os dados do usuário
-                </h4>
-
-
+                <h5 class="card-title">
+                    <?= $titulo; ?>
+                </h5>
             </div><!-- /.card-header -->
 
             <?= form_open("admin/usuarios/atualizar/$usuario->id"); ?>
@@ -53,7 +49,7 @@
                 <?= $this->include("Admin/Usuarios/_formulario"); ?>
             </div>
             <!-- /.card-body -->
-            <div class="card-footer">
+            <div class="card-footer bg-transparent border-top">
                 <div class="d-flex justify-content-center justify-content-sm-between">
                     <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="btn btn-secondary">
                         <i class="fas fa-undo mr-3"></i>Voltar
@@ -74,6 +70,10 @@
 
 <?= $this->section('scripts') ?>
 <!-- aqui vai os scripts vai extender -->
-<script src="<?= site_url("admin/assets/vendor/mask/jquery.mask.min.js"); ?>"></script>
-<script src="<?= site_url("admin/assets/vendor/mask/app.js"); ?>"></script>
+<script src="<?= site_url("admin/plugins/mask/jquery.mask.min.js"); ?>"></script>
+<script src="<?= site_url("admin/plugins/mask/app.js"); ?>"></script>
+
+
+
+
 <?= $this->endSection() ?>

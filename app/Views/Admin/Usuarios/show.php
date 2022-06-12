@@ -31,18 +31,16 @@
 <!-- Main content -->
 <section class="content">
     <div class="container">
-
         <div class="row">
             <div class="col-md-3">
-
                 <!-- Profile Image -->
-                <div class="card card-primary card-outline">
+                <div class="card card-info card-outline">
                     <div class="card-body box-profile">
                         <div class="text-center">
-                            <img class="profile-user-img img-fluid img-circle" src="../../dist/img/user4-128x128.jpg" alt="User profile picture">
+                            <img class="profile-user-img img-fluid img-circle" src="../../dist/img/user4-128x128.jpg" alt="Usuário sem foto" style="width: 360px;">
                         </div>
 
-                        <h3 class="profile-username text-center">
+                        <h3 class="profile-username text-center mt-5">
                             <?= $usuario->nome; ?>
                         </h3>
 
@@ -55,7 +53,8 @@
             </div>
             <!-- /.col -->
             <div class="col-md-9">
-                <div class="card">
+                <div class="card card-info card-outline">
+
                     <div class="card-header p-2">
                         <ul class="nav nav-pills">
                             <li class="nav-item">
@@ -64,7 +63,9 @@
                                 </a>
                             </li>
                         </ul>
-                    </div><!-- /.card-header -->
+                    </div>
+                    <!-- /.card-header -->
+
                     <div class="card-body">
                         <div class="tab-content">
                             <div class="active tab-pane" id="activity">
@@ -122,15 +123,15 @@
                         <div class="d-flex justify-content-center justify-content-sm-between">
 
                             <a href="<?= site_url('admin/usuarios'); ?>" class="btn btn-secondary">
-                                <i class="bi bi-arrow-counterclockwise me-3"></i>Voltar
+                                <i class="fas fa-undo-alt mr-2"></i>Voltar
                             </a>
 
                             <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-warning">
-                                <i class="bi bi-pencil me-3"></i>Editar
+                                <i class="fas fa-pencil-alt mr-2"></i>Editar
                             </a>
 
                             <a href="" class="btn btn-danger">
-                                <i class="bi bi-trash me-3"></i>Deletar
+                                <i class="far fa-trash-alt mr-2"></i>Deletar
                             </a>
 
                         </div>

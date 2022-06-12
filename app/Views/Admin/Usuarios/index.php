@@ -4,7 +4,7 @@
 
 <?= $this->section('estilos') ?>
 <!-- estilos da pagina que vai extender -->
-<link rel="stylesheet" href="<?= site_url('admin/assets/vendor/auto-complete/jquery-ui.css'); ?>">
+<link rel="stylesheet" href="<?= site_url('admin/plugins/auto-complete/jquery-ui.css'); ?>">
 <?= $this->endSection() ?>
 
 <?= $this->section('breadcrumb') ?>
@@ -30,60 +30,74 @@
 <?= $this->section('conteudo') ?>
 <div class="container">
 
-    <div class="row">
-        <div class="col-lg-12">
-            <div class="card">
-                <div class="card-body">
-                    <!-- Table with stripped rows -->
-                    <table class="table table-striped table-hover">
-                        <thead>
-                            <tr>
-                                <th scope="col">Nome completo</th>
-                                <th scope="col">E-mail</th>
-                                <th scope="col">CPF</th>
-                                <th scope="col">Situação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php foreach ($usuarios as $usuario) : ?>
-                                <tr>
-                                    <td>
-                                        <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="text-dark list-unstyled">
-                                            <?= $usuario->nome; ?>
-                                        </a>
-                                    </td>
-                                    <td><?= $usuario->email; ?></td>
-                                    <td><?= $usuario->cpf; ?></td>
-                                    <td><?= ($usuario->ativo ? '<span class="badge bg-success px-3 py-2">Ativo</span>' : '<span class="badge bg-danger px-3 py-2">Inativo</span>'); ?></td>
-                                </tr>
-                            <?php endforeach; ?>
-                        </tbody>
-                    </table>
-                    <!-- End Table with stripped rows -->
+    <div class="card">
+        <div class="card-header">
 
+            <div class="row d-flex align-items-center bd-highlight">
+                <div class="col-12 col-sm-6 my-2">
+                    <h5 class="card-title"><?= $titulo; ?></h5>
+                </div>
+
+                <div class="col-12 col-sm-6 my-2">
+                    <a href="#" class="btn btn-primary float-md-right">
+                        <i class="fas fa-plus mr-2"></i>Novo
+                    </a>
+                </div>
+            </div>
+
+            <div class="row my-3">
+                <div class="col-12">
+                    <div class="ui-widget">
+                        <input class="form-control" id="query" name="query" placeholder="Nome do usuário...">
+                    </div>
                 </div>
             </div>
         </div>
+
+        <div class="card-body">
+            <!-- Table with stripped rows -->
+            <div class="table-responsive">
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome completo</th>
+                            <th class="d-none d-md-table-cell">E-mail</th>
+                            <th class="d-none d-sm-table-cell">CPF</th>
+                            <th class="d-none d-xl-table-cell">Situação</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($usuarios as $usuario) : ?>
+                            <tr>
+                                <td>
+                                    <a href="<?= site_url("admin/usuarios/show/$usuario->id"); ?>" class="text-dark list-unstyled">
+                                        <?= $usuario->nome; ?>
+                                    </a>
+                                </td>
+                                <td class="d-none d-md-table-cell"><?= $usuario->email; ?></td>
+                                <td class="d-none d-sm-table-cell"><?= $usuario->cpf; ?></td>
+                                <td class="d-none d-xl-table-cell"><?= ($usuario->ativo ? '<span class="badge bg-success px-3 py-2"><i class="far fa-thumbs-up mr-1"></i>Ativo</span>' : '<span class="badge bg-danger px-3 py-2"><i class="far fa-thumbs-down mr-1"></i>Inativo</span>'); ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+                <!-- End Table with stripped rows -->
+            </div>
+        </div>
+        <div class="card-footer bg-transparent">
+            footer aqui
+        </div>
     </div>
+
+
+
 </div>
+
 <?= $this->endSection() ?>
 
 <?= $this->section('scripts') ?>
 <!-- aqui vai os scripts vai extender -->
-<script src="<?= site_url('admin/assets/vendor/auto-complete/jquery-ui.js'); ?>"></script>
-
-<script src="../../assets/vendor/libs/datatables/jquery.dataTables.js"></script>
-<script src="../../assets/vendor/libs/datatables-bs5/datatables-bootstrap5.js"></script>
-<script src="../../assets/vendor/libs/datatables-responsive/datatables.responsive.js"></script>
-<script src="../../assets/vendor/libs/datatables-responsive-bs5/responsive.bootstrap5.js"></script>
-<script src="../../assets/vendor/libs/datatables-checkboxes-jquery/datatables.checkboxes.js"></script>
-<script src="../../assets/vendor/libs/datatables-buttons/datatables-buttons.js"></script>
-<script src="../../assets/vendor/libs/datatables-buttons-bs5/buttons.bootstrap5.js"></script>
-<script src="../../assets/vendor/libs/jszip/jszip.js"></script>
-<script src="../../assets/vendor/libs/pdfmake/pdfmake.js"></script>
-<script src="../../assets/vendor/libs/datatables-buttons/buttons.html5.js"></script>
-<script src="../../assets/vendor/libs/datatables-buttons/buttons.print.js"></script>
-
+<script src="<?= site_url('admin/plugins/auto-complete/jquery-ui.js'); ?>"></script>
 
 <script>
     $(function() {

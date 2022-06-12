@@ -18,7 +18,7 @@
     ?>
 </head>
 
-<body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed">
+<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed">
     <!-- Site wrapper -->
     <div class="wrapper">
         <!-- Navbar -->
@@ -31,7 +31,6 @@
         <?php
         echo $this->include('Admin/layout/sidebar');
         ?>
-
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <?php
@@ -72,8 +71,6 @@
     <script src="<?= site_url('admin/plugins/bootstrap/js/bootstrap.bundle.min.js'); ?>"></script>
     <!-- AdminLTE App -->
     <script src="<?= site_url('admin/dist/js/adminlte.min.js'); ?>"></script>
-    <!-- AdminLTE for demo purposes -->
-    <script src="<?= site_url('admin/dist/js/demo.js'); ?>"></script>
 
     <?php
     //Aqui será renderezidado os scripts 

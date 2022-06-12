@@ -20,7 +20,9 @@ class UsuarioModel extends Model
     protected $createdField  = 'criado_em';
     protected $updatedField  = 'atualizado_em';
     protected $deletedField  = 'deletado_em';
-
+    //Eventos de callback
+    protected $beforeInsert = ['hashPassword'];
+    protected $beforeUpdate = ['hashPassword'];
 
     protected $validationRules    = [
         'nome'                  => 'required|min_length[4]|max_length[120]',
@@ -56,12 +58,15 @@ class UsuarioModel extends Model
         ],
     ];
 
-
-
-
-
-
-
+    protected function hashPassword($data)
+    {
+        if (isset($data['data']['password'])) {
+            $data['data']['password_hash'] = password_hash($data['data']['password'], PASSWORD_DEFAULT);
+            unset($data['data']['password']);
+            unset($data['data']['password_confirmation']);
+        }
+        return $data;
+    }
 
     public function procurar($term)
     {
@@ -75,6 +80,9 @@ class UsuarioModel extends Model
             ->getResult();
     }
 
+
+
+    /** Desabilita a verifiação dos campos de senha caso o usuário não informe-os */
     public function desabilitaValidacaoSenha()
     {
         unset($this->validationRules['password']);

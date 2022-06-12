@@ -78,20 +78,21 @@ class Usuarios extends BaseController
 
             $usuario->fill($post);
 
-
             //Vefica se houve alteração no campos
             if (!$usuario->hasChanged()) {
                 return redirect()->back()->with('informacao', "Não há dados para atualizar");
             }
 
+            //Salva os dados do usuário no banco de dados caso eles sejam alterados.
             if ($this->usuarioModel->protect(false)->save($usuario)) {
-                return redirect()->to(site_url("admin/usuarios/show/$usuario->id"))
-                    ->with('sucesso', "Dados do usuário $usuario->nome, atualizados com sucesso!");
+                return redirect()
+                    ->to(site_url("admin/usuarios/show/$usuario->id"))
+                    ->with('sucesso', "Dados do usuário <b>$usuario->nome</b>, atualizados com sucesso!");
             } else {
                 return redirect()
                     ->back()
                     ->with('errors_model', $this->usuarioModel->errors())
-                    ->with('atencao', "Verifique os erros e tente novamente");
+                    ->withInput();
             }
         } else {
             return redirect()->back();
