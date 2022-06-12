@@ -130,9 +130,22 @@
                                 <i class="fas fa-pencil-alt mr-2"></i>Editar
                             </a>
 
-                            <a href="<?= site_url("admin/usuarios/excluir/$usuario->id"); ?>" class="btn btn-danger">
-                                <i class="far fa-trash-alt mr-2"></i>Excluir
-                            </a>
+
+
+                            <?php if ($usuario->deletado_em == null) : ?>
+                                <a href="<?= site_url("admin/usuarios/excluir/$usuario->id"); ?>" class="btn btn-danger">
+                                    <i class="far fa-trash-alt mr-2"></i>Excluir
+                                </a>
+                            <?php else : ?>
+                                <a href="<?= site_url("admin/usuarios/desfazerexclusao/$usuario->id"); ?>" class="btn btn-success">
+                                    <i class="fas fa-recycle mr-2"></i>Recuperar
+                                </a>
+                            <?php endif; ?>
+
+
+
+
+
                         </div>
                     </div>
                 </div>

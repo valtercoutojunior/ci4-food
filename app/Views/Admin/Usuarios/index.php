@@ -63,6 +63,7 @@
                             <th>Nome completo</th>
                             <th class="d-none d-md-table-cell">E-mail</th>
                             <th class="d-none d-sm-table-cell">CPF</th>
+                            <th class="d-none d-xl-table-cell">Ativo</th>
                             <th class="d-none d-xl-table-cell">Situação</th>
                         </tr>
                     </thead>
@@ -77,6 +78,12 @@
                                 <td class="d-none d-md-table-cell"><?= $usuario->email; ?></td>
                                 <td class="d-none d-sm-table-cell"><?= $usuario->cpf; ?></td>
                                 <td class="d-none d-xl-table-cell"><?= ($usuario->ativo ? '<span class="badge bg-success px-3 py-2"><i class="far fa-thumbs-up mr-1"></i>Ativo</span>' : '<span class="badge bg-danger px-3 py-2"><i class="far fa-thumbs-down mr-1"></i>Inativo</span>'); ?></td>
+                                <td class="d-none d-xl-table-cell">
+                                    <?= ($usuario->ativo && $usuario->deletado_em == null ? '<span class="badge bg-success px-3 py-2"><i class="far fa-thumbs-up mr-1"></i>Disponível</span>' : '<span class="badge bg-danger px-3 py-2"><i class="far fa-thumbs-down mr-1"></i>Excluído</span>'); ?>
+                                    <?php if ($usuario->deletado_em != null) : ?>
+                                        <a href="<?= site_url("admin/usuarios/desfazerexclusao/$usuario->id"); ?>"><span class="badge bg-success btn-sm px-3 py-2"><i class="fas fa-recycle mr-2"></i>Recuperar</span></a>
+                                    <?php endif; ?>
+                                </td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
