@@ -130,8 +130,8 @@
                                 <i class="fas fa-pencil-alt mr-2"></i>Editar
                             </a>
 
-                            <a href="" class="btn btn-danger">
-                                <i class="far fa-trash-alt mr-2"></i>Deletar
+                            <a href="<?= site_url("admin/usuarios/excluir/$usuario->id"); ?>" class="btn btn-danger">
+                                <i class="far fa-trash-alt mr-2"></i>Excluir
                             </a>
 
                         </div>
