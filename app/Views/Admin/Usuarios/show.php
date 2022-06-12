@@ -103,12 +103,23 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group row">
-                                            <label for="inputSkills" class="col-sm-2 col-form-label">Atualizado em</label>
-                                            <div class="col-sm-10">
-                                                <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="<?= $usuario->atualizado_em->humanize(); ?>">
+
+                                        <?php if ($usuario->deletado_em == null) : ?>
+                                            <div class="form-group row">
+                                                <label for="inputSkills" class="col-sm-2 col-form-label">Atualizado em</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="<?= $usuario->atualizado_em->humanize(); ?>">
+                                                </div>
                                             </div>
-                                        </div>
+                                        <?php else : ?>
+                                            <div class="form-group row">
+                                                <label for="inputSkills" class="col-sm-2 col-form-label">Deletado em</label>
+                                                <div class="col-sm-10">
+                                                    <input type="text" class="form-control" id="inputSkills" placeholder="Skills" value="<?= $usuario->deletado_em->humanize(); ?>">
+                                                </div>
+                                            </div>
+                                        <?php endif; ?>
+
 
                                     </form>
                                 </div>
@@ -126,13 +137,13 @@
                                 <i class="fas fa-undo-alt mr-2"></i>Voltar
                             </a>
 
-                            <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-warning">
-                                <i class="fas fa-pencil-alt mr-2"></i>Editar
-                            </a>
-
-
-
                             <?php if ($usuario->deletado_em == null) : ?>
+
+                                <a href="<?= site_url("admin/usuarios/editar/$usuario->id"); ?>" class="btn btn-warning">
+                                    <i class="fas fa-pencil-alt mr-2"></i>Editar
+                                </a>
+
+
                                 <a href="<?= site_url("admin/usuarios/excluir/$usuario->id"); ?>" class="btn btn-danger">
                                     <i class="far fa-trash-alt mr-2"></i>Excluir
                                 </a>
@@ -141,10 +152,6 @@
                                     <i class="fas fa-recycle mr-2"></i>Recuperar
                                 </a>
                             <?php endif; ?>
-
-
-
-
 
                         </div>
                     </div>

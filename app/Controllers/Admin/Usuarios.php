@@ -153,7 +153,6 @@ class Usuarios extends BaseController
         return view('Admin/Usuarios/excluir', $data);
     }
 
-
     public function desfazerExclusao($id = null)
     {
         $usuario = $this->buscaUsuarioOu404($id);
